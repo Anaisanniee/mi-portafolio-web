@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Web</title>
+    <title>Calculadora Web</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="cal">
+    <div id="calculadora" class="cal">
         <div class="pantalla">
             <input id="txtpantalla" type="text">
         </div>
         <div class="boton">
-            <button onclick="uno()">1</button>
-            <button onclick="dos()">2</button>
-            <button onclick="tres()">3</button>
-            <button onclick="mas()">+</button>
+            <div class="buttom0">
+                <button id="icono" onclick="borrar()"><i class="fas fa-trash"></i></button>
+                <button id="icono" onclick="escribir('()')">()<i class="fas fa-parentheses"></i></button>
+                <button id="icono" onclick="porcentaje('%')"><i class="fas fa-percent"></i></button>
+                <button id="simbolos" onclick="escribir('/')"><i class="fas fa-divide"></i></button>
+            </div>
 
-            <button onclick="cuatro()">4</button>
-            <button onclick="cinco()">5</button>
-            <button onclick="seis()">6</button>
-            <button onclick="resta()">-</button>
+            <div class="buttom1">
+                <button id="num" onclick="escribir('1')">1</button>
+                <button id="num" onclick="escribir('2')">2</button>
+                <button id="num" onclick="escribir('3')">3</button>
+                <button id="simbolos" onclick="escribir('+')"><i class="fas fa-plus"></i></button>
+            </div>
 
+            <div class="buttom2">
+                <button id="num" onclick="escribir('4')">4</button>
+                <button id="num" onclick="escribir('5')">5</button>
+                <button id="num" onclick="escribir('6')">6</button>
+                <button id="simbolos" onclick="escribir('-')"><i class="fas fa-minus"></i></button>
+            </div>
 
-            <button onclick="siete()">7</button>
-            <button onclick="ocho()">8</button>
-            <button onclick="nueve()">9</button>
-            <button onclick="mul()">*</button>
-            <button onclick="div()">/</button>
-            <button onclick="resultado()">=</button>
-            <button id="borrar" onclick="borrar()">Borrar</button>
-        </div>
+            <div class="buttom3">
+                <button id="num" onclick="escribir('7')">7</button>
+                <button id="num" onclick="escribir('8')">8</button>
+                <button id="num" onclick="escribir('9')">9</button>
+                <button id="simbolos" onclick="escribir('*')"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="buttom4">
+                <button id="icono" onclick="masmenos()">+/-</button>
+                <button id="num" onclick="escribir('0')">0</button>
+                <button id="icono" onclick="escribir('.')">.<i class="fas fa-dot"></i></button>
+                <button id="simbolos" onclick="Calcular()"><i class="fas fa-equals"></i></button>
+            </div>
     </div>
 </body>
 <script src="funciones.js"></script>

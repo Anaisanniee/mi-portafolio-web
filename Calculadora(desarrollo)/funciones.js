@@ -1,74 +1,38 @@
-function uno()
+function escribir(valor)
 {
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"1";
+    document.getElementById("txtpantalla").value+=valor;
 }
 
-function dos()
+
+function Calcular()
 {
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"2";
+  let resultado= document.getElementById("txtpantalla").value;
+  try{
+    resultado=eval(resultado);
+    document.getElementById("txtpantalla").value=resultado;
+  } 
+    catch(error){ 
+        document.getElementById("txtpantalla").value="Error";              
+    }
 }
 
-function tres()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"3";
+function masmenos(){
+    let valor=document.getElementById("txtpantalla").value;
+     if(valor.charAt(0)=="-"){
+        document.getElementById("txtpantalla").value=valor.substring(1);
+     }
+     else{
+        document.getElementById("txtpantalla").value="-"+valor;
+     }
 }
 
-function cuatro()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"4";
+function porcentaje(){
+    let valor=document.getElementById("txtpantalla");
+    if(valor.value !== ""){
+        pantalla.value=eval(pantalla.value/100);
+    }
 }
 
-function cinco()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"5";
-}
-
-function seis()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"6";
-}
-
-function siete()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"7";
-}
-
-function ocho()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"8";
-}
-
-function nueve()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"9";
-}
-
-function mas()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"+";
-}
-
-function resta()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"-";
-}
-
-function div()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"/";
-}
-
-function mul()
-{
-    document.getElementById("txtpantalla").value=document.getElementById("txtpantalla").value+"*";
-}
-
-function resultado()
-{
-    document.getElementById("txtpantalla").value=eval(document.getElementById("txtpantalla").value)
-}
-
-document.getElementById("txtpantalla").value=""
 function borrar(){
     document.getElementById("txtpantalla").value=""
 }
